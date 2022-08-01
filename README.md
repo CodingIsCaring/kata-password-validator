@@ -1,4 +1,4 @@
-# Password Validator Kata
+# [Password Validator Kata](https://katalyst.codurance.com/password-validation?utm_content=213945527&utm_medium=social&utm_source=twitter&hss_channel=tw-722314876216086528)
 
 Difficulty: Beginner
 

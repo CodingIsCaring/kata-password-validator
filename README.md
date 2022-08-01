@@ -14,7 +14,7 @@ The password will be introduced by the user (as an argument of the method) and s
 
 A valid password should meet the following requirements:
 
-- Have more than 8 characters
+- Has more than 8 characters
 - Contains a capital letter
 - Contains a lowercase
 - Contains a number

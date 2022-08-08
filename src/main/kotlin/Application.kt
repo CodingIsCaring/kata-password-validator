@@ -17,6 +17,10 @@ class Application {
                 return false
             }
 
+            if (!password.contains("_")) {
+                return false
+            }
+
             return true
         }
 

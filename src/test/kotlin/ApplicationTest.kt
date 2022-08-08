@@ -15,7 +15,7 @@ class ApplicationTest {
 
     @Test
     fun `should be valid password`() {
-        assertTrue(Application.validate("p4sswOrds"))
+        assertTrue(Application.validate("p4sswOrds_"))
     }
 
     @Test
@@ -31,6 +31,11 @@ class ApplicationTest {
     @Test
     fun `should be invalid if does not contain at least a number`() {
         assertFalse(Application.validate("passwords"))
+    }
+
+    @Test
+    fun `should be invalid if does not contain an underscore`() {
+        assertFalse(Application.validate("p4sswOrds"))
     }
 
 }

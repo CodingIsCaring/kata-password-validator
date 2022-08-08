@@ -21,7 +21,7 @@ class StrongValidationTest {
 
     @Test
     fun `should be invalid if it does not contain a capital letter`() {
-        assertFalse(StrongValidation.validate("passwordpasswordpassword"))
+        assertFalse(StrongValidation.validate("p_sswordpasswordpassword"))
     }
 
     @Test

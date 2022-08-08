@@ -21,13 +21,12 @@ class SoftValidationTest {
 
     @Test
     fun `should be invalid if it does not contain a capital letter`() {
-        assertFalse(SoftValidation.validate("password"))
+        assertFalse(SoftValidation.validate("p4ssword"))
     }
 
     @Test
     fun `should be invalid if it does not contain a lower case letter`() {
         assertFalse(SoftValidation.validate("P4SSWORD"))
     }
-
 
 }

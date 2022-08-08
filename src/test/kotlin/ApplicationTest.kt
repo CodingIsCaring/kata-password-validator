@@ -20,22 +20,22 @@ class ApplicationTest {
 
     @Test
     fun `should be invalid if does not contain at least one capital letter`() {
-        assertFalse(Application.validate("passwords"))
+        assertFalse(Application.validate("p4sswords_"))
     }
 
     @Test
     fun `should be invalid if does not contain at least one lower case`() {
-        assertFalse(Application.validate("PASSWORDS"))
+        assertFalse(Application.validate("P4SSWORDS_"))
     }
 
     @Test
     fun `should be invalid if does not contain at least a number`() {
-        assertFalse(Application.validate("passwords"))
+        assertFalse(Application.validate("Passwords_"))
     }
 
     @Test
     fun `should be invalid if does not contain an underscore`() {
-        assertFalse(Application.validate("p4sswOrds"))
+        assertFalse(Application.validate("p4ssWOrds"))
     }
 
 }

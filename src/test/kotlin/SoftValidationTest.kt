@@ -4,21 +4,6 @@ import org.junit.Test
 
 class SoftValidationTest {
 
-// Validation 2:
-//
-// Have more than 6 characters
-// Contains a capital letter
-// Contains a lowercase
-// Contains a number
-
-
-// Validation 3:
-//
-// Have more than 16 characters
-// Contains a capital letter
-// Contains a lowercase
-// Contains an underscore
-
     @Test
     fun `should be invalid if it has less than 7 characters`() {
         assertFalse(SoftValidation.validate("wrong"))

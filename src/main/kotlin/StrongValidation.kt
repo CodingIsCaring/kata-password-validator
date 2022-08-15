@@ -20,7 +20,9 @@ class StrongValidation {
             return true
         }
 
-        private fun hasEnoughCharacters(password: String) = password.length > 6
+        private fun hasEnoughCharacters(password: String): Boolean {
+            return password.length > 6
+        }
 
         private fun hasLowerCase(password: String): Boolean {
             val totalLowerCaseLetters = password.count { it.isLowerCase() }

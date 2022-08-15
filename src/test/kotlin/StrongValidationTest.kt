@@ -6,27 +6,27 @@ class StrongValidationTest {
 
     @Test
     fun `should be invalid if it has less than 17 characters`() {
-        assertFalse(StrongValidation.validate("wrong"))
+        assertFalse(StrongValidation().validate("wrong"))
     }
 
     @Test
     fun `should be valid`() {
-        assertTrue(StrongValidation.validate("P_ssWordP_ssWord_"))
+        assertTrue(StrongValidation().validate("P_ssWordP_ssWord_"))
     }
 
     @Test
     fun `should be invalid if it does not contain an underscore`() {
-        assertFalse(StrongValidation.validate("PasswordPasswordPassword"))
+        assertFalse(StrongValidation().validate("PasswordPasswordPassword"))
     }
 
     @Test
     fun `should be invalid if it does not contain a capital letter`() {
-        assertFalse(StrongValidation.validate("p_sswordpasswordpassword"))
+        assertFalse(StrongValidation().validate("p_sswordpasswordpassword"))
     }
 
     @Test
     fun `should be invalid if it does not contain a lower case letter`() {
-        assertFalse(StrongValidation.validate("P_SSWORDP_SSWORDP_SSWORD"))
+        assertFalse(StrongValidation().validate("P_SSWORDP_SSWORDP_SSWORD"))
     }
 
 

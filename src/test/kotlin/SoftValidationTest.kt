@@ -6,27 +6,27 @@ class SoftValidationTest {
 
     @Test
     fun `should be invalid if it has less than 7 characters`() {
-        assertFalse(SoftValidation().validate("wrong"))
+        assertFalse(ValidationFactory.createSoftValidation().validate("wrong"))
     }
 
     @Test
     fun `should be valid`() {
-        assertTrue(SoftValidation().validate("P4ssWord"))
+        assertTrue(ValidationFactory.createSoftValidation().validate("P4ssWord"))
     }
 
     @Test
     fun `should be invalid if it does not contain a number`() {
-        assertFalse(SoftValidation().validate("Password"))
+        assertFalse(ValidationFactory.createSoftValidation().validate("Password"))
     }
 
     @Test
     fun `should be invalid if it does not contain a capital letter`() {
-        assertFalse(SoftValidation().validate("p4ssword"))
+        assertFalse(ValidationFactory.createSoftValidation().validate("p4ssword"))
     }
 
     @Test
     fun `should be invalid if it does not contain a lower case letter`() {
-        assertFalse(SoftValidation().validate("P4SSWORD"))
+        assertFalse(ValidationFactory.createSoftValidation().validate("P4SSWORD"))
     }
 
 }

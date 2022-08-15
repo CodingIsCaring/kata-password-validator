@@ -1,18 +1,29 @@
-class SoftValidation {
+class Validation(
+    private val minimumNumberOfCharacters: Int,
+    private val allowsUpperCase: Boolean,
+    private val allowsLowerCase: Boolean,
+    private val allowsDigits: Boolean,
+    private val allowsUnderscore: Boolean
+) {
+
     fun validate(password: String): Boolean {
         if (!hasEnoughCharacters(password)) {
             return false
         }
 
-        if (!hasADigit(password)) {
+        if (allowsDigits && !hasADigit(password)) {
             return false
         }
 
-        if (!hasUpperCase(password)) {
+        if (allowsUpperCase && !hasUpperCase(password)) {
             return false
         }
 
-        if (!hasLowerCase(password)) {
+        if (allowsLowerCase && !hasLowerCase(password)) {
+            return false
+        }
+
+        if (allowsUnderscore && !hasUnderscore(password)) {
             return false
         }
 
@@ -20,7 +31,7 @@ class SoftValidation {
     }
 
     private fun hasEnoughCharacters(password: String): Boolean {
-        return password.length > 6
+        return password.length >= minimumNumberOfCharacters
     }
 
     private fun hasLowerCase(password: String): Boolean {
@@ -36,5 +47,9 @@ class SoftValidation {
     private fun hasUpperCase(password: String): Boolean {
         val totalUpperCaseLetters = password.count { it.isUpperCase() }
         return totalUpperCaseLetters != 0
+    }
+
+    private fun hasUnderscore(password: String): Boolean {
+        return password.contains("_")
     }
 }
